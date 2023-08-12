@@ -1,5 +1,6 @@
+const movieInput = document.getElementById("movieInput");
+
 function searchMovies() {
-    const movieInput = document.getElementById("movieInput");
     const keyword = movieInput.value;
 
     // Очищаем поле ввода
