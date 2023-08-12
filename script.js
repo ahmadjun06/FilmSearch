@@ -1,32 +1,3 @@
-// Функция для выполнения запроса к OMDb API
-// function getMovieInfo(title) {
-//     let xhr = new XMLHttpRequest();
-//     xhr.open('GET', 'http://www.omdbapi.com/?t=' + title + '&apikey=5e04301f', true);
-//     xhr.onload = function () {
-//         if (xhr.status === 200) {
-//             let movieInfo = JSON.parse(xhr.responseText);
-
-//             // Информацию о фильме на страницу
-//             let moviePhoto = document.querySelector(".movie-photo")
-//             moviePhoto,innerHTML = ''
-//             moviePhoto.innerHTML += '<img src=' + movieInfo.Poster + ' alt="Photo_film"></img>';
-
-//             let movieDiv = document.getElementById('movie-info');
-//             movieDiv.innerHTML = '';
-//             movieDiv.innerHTML += '<h2>' + movieInfo.Title + '</h2>';
-//             movieDiv.innerHTML += '<p>Год: ' + movieInfo.Year + '</p>';
-//             movieDiv.innerHTML += '<p>IMDb-рейтинг: ' + movieInfo.imdbRating + '</p>';
-//             movieDiv.innerHTML += '<p>Жанр: ' + movieInfo.Genre + '</p>';
-//             movieDiv.innerHTML += '<p>Режиссер: ' + movieInfo.Director + '</p>';
-//             movieDiv.innerHTML += '<p>Актеры: ' + movieInfo.Actors + '</p>';
-//             movieDiv.innerHTML += '<p class="plot">Сюжет: ' + movieInfo.Plot + '</p>';
-//         } else {
-//             console.error('Произошла ошибка при выполнении запроса');
-//         }
-//     };
-//     xhr.send();
-// }
-// getMovieInfo('The Social Network');
 function searchMovies() {
     const movieInput = document.getElementById("movieInput");
     const keyword = movieInput.value;
@@ -70,7 +41,7 @@ function addToFavorites(imdbID) {
         .then(response => response.json())
         .then(data => {
             // Создаем элемент списка для избранных фильмов
-            const favoriteMovie = document.createElement("li");
+            const favoriteMovie = document.createElement("li")
             favoriteMovie.innerHTML = `${data.Title} (${data.Year})`;
 
             // Проверяем, есть ли данное imdbID уже в списке избранных фильмов

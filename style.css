@@ -2,13 +2,13 @@ body {
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     margin: 0;
-    padding: 40px;
+    /* padding: 40px; */
     background-color: gold;
     color: white;
 }
 .container {
     text-align: center;
-    max-width: 600px;
+    /* max-width: 300px; */
     margin: 0 auto;
     padding: 20px;
 }
@@ -16,6 +16,7 @@ body {
     display: flex;
     gap: 30px;
     align-items: center;
+    margin-bottom: 30px;
     justify-content: center;
 }
 input{
@@ -25,6 +26,15 @@ input{
     border-radius: 12px;
     border: 0;
     margin-bottom: 10px;
+}
+#movies{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-left: 150px;
+}
+.movie-card{
+    max-width: 300px;
 }
 button{
     color: white;
@@ -46,7 +56,10 @@ ul {
 }
 
 li {
-    margin-bottom: 5px;
+    margin-bottom: 30px;
+}
+.favoriteMovie{
+    text-align: center;
 }
 
 .favorite {
